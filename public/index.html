@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Detection Suite</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        margin: 2rem;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      .card {
+        background: #111827;
+        padding: 1.5rem;
+        border-radius: 12px;
+        max-width: 720px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+      }
+      .status {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        background: #1e293b;
+        font-size: 0.85rem;
+      }
+      .metric {
+        background: #0b1120;
+        padding: 0.75rem;
+        border-radius: 10px;
+      }
+      button {
+        background: #38bdf8;
+        color: #0f172a;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      code {
+        color: #7dd3fc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Bot Detection Suite</h1>
+      <p>
+        This demo collects browser execution signals: <code>performance.now()</code>
+        sampled inside a Web Worker and a debugger pause check to detect automation
+        interference.
+      </p>
+      <button id="run-check">Run Detection</button>
+      <div class="status" id="status"></div>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
